@@ -1,0 +1,13 @@
+# Android
+bin
+gen
+
+# Eclipse
+.project
+.classpath
+.settings
+
+# Ant
+build.xml
+local.properties
+proguard.cfg
