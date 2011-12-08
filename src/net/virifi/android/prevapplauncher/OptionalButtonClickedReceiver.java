@@ -18,7 +18,7 @@ public class OptionalButtonClickedReceiver extends BroadcastReceiver {
 		ActivityManager am = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
 		List<ActivityManager.RecentTaskInfo> recentTaskList = am.getRecentTasks(5, ActivityManager.RECENT_WITH_EXCLUDED);
 		
-		for (int j = 1; j < 4; j++) {
+		for (int j = 1; j < recentTaskList.size(); j++) {
 			RecentTaskInfo info = recentTaskList.get(j);
 			Intent i = info.baseIntent;
 			String packageName = i.getComponent().getPackageName();
