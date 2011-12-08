@@ -24,7 +24,8 @@ public class OptionalButtonClickedReceiver extends BroadcastReceiver {
 			String packageName = i.getComponent().getPackageName();
 			if (!"com.android.launcher".equals(packageName)) {
 				try {
-					context.startActivity(info.baseIntent);
+					i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					context.startActivity(i);
 					break;
 				} catch (ActivityNotFoundException e) {
 					;
